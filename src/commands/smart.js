@@ -6,7 +6,7 @@ class SmartCommand extends Command {
   async run() {
     const {flags} = this.parse(SmartCommand)
     const name = flags.name || 'myComponent'
-    await fs.writeFile(`${name}.js`, smartNameComponent(name))
+     await fs.writeFile(`${name}.js`, smartNameComponent(name))
   }
 }
 
