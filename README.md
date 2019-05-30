@@ -50,8 +50,6 @@ OPTIONS
   --all  see all commands in CLI
 ```
 
-_See code: [@oclif/plugin-help](https://github.com/oclif/plugin-help/blob/v2.1.6/src/commands/help.ts)_
-
 ## `rqt smart`
 
 Create a basic smart React component
@@ -85,8 +83,6 @@ export default class MyComponent extends React.Component {
 }
 ```
 
-_See code: [src/commands/smart.js](https://github.com/bcree11/react-template-cli/blob/v0.0.0/src/commands/smart.js)_
-
 ## `rqt dumb`
 
 Create a basic dumb React component
@@ -114,8 +110,6 @@ const MyComponent = (props) => {
   )
 }
 ```
-
-_See code: [src/commands/dumb.js](https://github.com/bcree11/react-template-cli/blob/v0.0.0/src/commands/dumb.js)_
 
 ## `rqt dmui`
 
@@ -157,8 +151,6 @@ MyComponent.propTypes = {
 
 export default withStyles(styles)(MyComponent)
 ```
-
-_See code: [src/commands/dmui.js](https://github.com/bcree11/react-template-cli/blob/v0.0.0/src/commands/dmui.js)_
 
 ## `rqt mui`
 
@@ -206,8 +198,6 @@ MyComponent.propTypes = {
 export default withStyles(styles)(MyComponent)
 ```
 
-_See code: [src/commands/mui.js](https://github.com/bcree11/react-template-cli/blob/v0.0.0/src/commands/mui.js)_
-
 ## `rqt routes`
 
 Create a React-Router file
@@ -236,8 +226,5 @@ export default props => (
   </BrowserRouter>
 )
 ```
-
-
-_See code: [src/commands/routes.js](https://github.com/bcree11/react-template-cli/blob/v0.0.0/src/commands/routes.js)_
 
 <!-- commandsstop -->
