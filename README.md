@@ -31,9 +31,9 @@ USAGE
 * [`rqt help [COMMAND]`](#rqt-help-command)
 * [`rqt smart -n name`](#rqt-smart)
 * [`rqt dumb -n name`](#rqt-dumb)
-* [`rqt routes`](#rqt-routes)
 * [`rqt dmui -n name`](#rqt-dmui)
 * [`rqt mui -n name`](#rqt-mui)
+* [`rqt routes`](#rqt-routes)
 
 ## `rqt help [COMMAND]`
 
@@ -116,37 +116,6 @@ const MyComponent = (props) => {
 ```
 
 _See code: [src/commands/dumb.js](https://github.com/bcree11/react-quick-template-cli/blob/v0.0.0/src/commands/dumb.js)_
-
-## `rqt routes`
-
-Create a React-Router file
-
-```
-USAGE
-  $ rqt routes
-
-DESCRIPTION
-
-routes.js
-
-import React from 'react'
-import {
-  BrowserRouter,
-  Route,
-  Switch
-} from 'react-router-dom'
-
-export default props => (
-  <BrowserRouter>
-    <Switch>
-      <Route exact path='/some-route' component={SomeComponent}/>
-      <Route path='/' component={Home}/>
-    </Switch>
-  </BrowserRouter>
-)
-```
-
-_See code: [src/commands/routes.js](https://github.com/bcree11/react-quick-template-cli/blob/v0.0.0/src/commands/routes.js)_
 
 ## `rqt dmui`
 
@@ -238,5 +207,37 @@ export default withStyles(styles)(MyComponent)
 ```
 
 _See code: [src/commands/mui.js](https://github.com/bcree11/react-quick-template-cli/blob/v0.0.0/src/commands/mui.js)_
+
+## `rqt routes`
+
+Create a React-Router file
+
+```
+USAGE
+  $ rqt routes
+
+DESCRIPTION
+
+routes.js
+
+import React from 'react'
+import {
+  BrowserRouter,
+  Route,
+  Switch
+} from 'react-router-dom'
+
+export default props => (
+  <BrowserRouter>
+    <Switch>
+      <Route exact path='/some-route' component={SomeComponent}/>
+      <Route path='/' component={Home}/>
+    </Switch>
+  </BrowserRouter>
+)
+```
+
+
+_See code: [src/commands/routes.js](https://github.com/bcree11/react-quick-template-cli/blob/v0.0.0/src/commands/routes.js)_
 
 <!-- commandsstop -->
