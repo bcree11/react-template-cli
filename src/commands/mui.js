@@ -10,13 +10,10 @@ class MuiCommand extends Command {
   }
 }
 
-MuiCommand.description = `Describe the command here
-...
-Extra documentation goes here
-`
+MuiCommand.description = `Create a barebones Material-UI React component`
 
 MuiCommand.flags = {
-  name: flags.string({char: 'n', description: 'name to print'}),
+  name: flags.string({char: 'n', description: 'name of file and component'}),
 }
 
 module.exports = MuiCommand

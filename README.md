@@ -28,46 +28,12 @@ USAGE
 <!-- usagestop -->
 # Commands
 <!-- commands -->
-* [`rqt dmui`](#rqt-dmui)
-* [`rqt dumb`](#rqt-dumb)
 * [`rqt help [COMMAND]`](#rqt-help-command)
+* [`rqt smart`](#rqt-smart)
+* [`rqt dumb`](#rqt-dumb)
+* [`rqt routes`](#rqt-routes)
+* [`rqt dmui`](#rqt-dmui)
 * [`rqt mui`](#rqt-mui)
-
-## `rqt dmui`
-
-Describe the command here
-
-```
-USAGE
-  $ rqt dmui
-
-OPTIONS
-  -n, --name=name  name to print
-
-DESCRIPTION
-  ...
-  Extra documentation goes here
-```
-
-_See code: [src/commands/dmui.js](https://github.com/bcree11/react-quick-template-cli/blob/v0.0.0/src/commands/dmui.js)_
-
-## `rqt dumb`
-
-Describe the command here
-
-```
-USAGE
-  $ rqt dumb
-
-OPTIONS
-  -n, --name=name  name to print
-
-DESCRIPTION
-  ...
-  Extra documentation goes here
-```
-
-_See code: [src/commands/dumb.js](https://github.com/bcree11/react-quick-template-cli/blob/v0.0.0/src/commands/dumb.js)_
 
 ## `rqt help [COMMAND]`
 
@@ -86,21 +52,191 @@ OPTIONS
 
 _See code: [@oclif/plugin-help](https://github.com/oclif/plugin-help/blob/v2.1.6/src/commands/help.ts)_
 
+## `rqt smart`
+
+Create a basic smart React component
+
+```
+USAGE
+  $ rqt smart
+
+OPTIONS
+  -n, --name=name  name of file and component
+
+DESCRIPTION
+
+myComponent.js
+
+import React from 'react'
+import './App.css'
+
+export default class MyComponent extends React.Component {
+  state = {
+  }
+
+  render() {
+    const {} = this.state
+    return (
+      <div>
+        <h1>MyComponent Component</h1>
+      </div>
+    )
+  }
+}
+```
+
+_See code: [src/commands/dmui.js](https://github.com/bcree11/react-quick-template-cli/blob/v0.0.0/src/commands/smart.js)_
+
+## `rqt dumb`
+
+Create a basic dumb React component
+
+```
+USAGE
+  $ rqt dumb
+
+OPTIONS
+  -n, --name=name  name of file and component
+
+DESCRIPTION
+
+myComponent.js
+
+import React from 'react'
+import './App.css'
+
+const MyComponent = (props) => {
+  const {} = props
+  return (
+    <div>
+      <h1>MyComponent Component</h1>
+    </div>
+  )
+}
+```
+
+_See code: [src/commands/dumb.js](https://github.com/bcree11/react-quick-template-cli/blob/v0.0.0/src/commands/dumb.js)_
+
+## `rqt routes`
+
+Create a React-Router file
+
+```
+USAGE
+  $ rqt routes
+
+DESCRIPTION
+
+routes.js
+
+import React from 'react'
+import {
+  BrowserRouter,
+  Route,
+  Switch
+} from 'react-router-dom'
+
+export default props => (
+  <BrowserRouter>
+    <Switch>
+      <Route exact path='/some-route' component={SomeComponent}/>
+      <Route path='/' component={Home}/>
+    </Switch>
+  </BrowserRouter>
+)
+```
+
+_See code: [src/commands/dumb.js](https://github.com/bcree11/react-quick-template-cli/blob/v0.0.0/src/commands/routes.js)_
+
+## `rqt dmui`
+
+Create a barebones dumb Material-UI React component
+
+```
+USAGE
+  $ rqt dmui
+
+OPTIONS
+  -n, --name=name  name of file and component
+
+DESCRIPTION
+
+myComponent.js
+
+import React from 'react'
+import PropTypes from 'prop-types'
+import { withStyles } from '@material-ui/core/styles'
+
+const styles = theme => ({
+  root: {
+    color: 'blue'
+  },
+})
+
+const MyComponent = (props) => {
+  const { classes } = props
+  return (
+    <div className={classes.root}>
+      <h1>MyComponent M-UI Component</h1>
+    </div>
+  )
+}
+
+MyComponent.propTypes = {
+  classes: PropTypes.object.isRequired,
+}
+
+export default withStyles(styles)(MyComponent)
+```
+
+_See code: [src/commands/dmui.js](https://github.com/bcree11/react-quick-template-cli/blob/v0.0.0/src/commands/dmui.js)_
+
 ## `rqt mui`
 
-Describe the command here
+Create a barebones dumb Material-UI React component
 
 ```
 USAGE
   $ rqt mui
 
 OPTIONS
-  -n, --name=name  name to print
+  -n, --name=name  name of file and component
 
 DESCRIPTION
-  ...
-  Extra documentation goes here
+
+myComponent.js
+
+import React from 'react'
+import PropTypes from 'prop-types'
+import { withStyles } from '@material-ui/core/styles'
+
+const styles = theme => ({
+  root: {
+    color: 'blue'
+  },
+})
+
+class MyComponent extends React.Component {
+  state = {
+  }
+
+  render() {
+    const {} = this.state
+    return (
+      <div className={classes.root}>
+        <h1>MyComponent M-UI Component</h1>
+      </div>
+    )
+  }
+}
+
+MyComponent.propTypes = {
+  classes: PropTypes.object.isRequired,
+}
+
+export default withStyles(styles)(MyComponent)
 ```
 
 _See code: [src/commands/mui.js](https://github.com/bcree11/react-quick-template-cli/blob/v0.0.0/src/commands/mui.js)_
+
 <!-- commandsstop -->

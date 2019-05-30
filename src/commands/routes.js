@@ -8,13 +8,6 @@ class RoutesCommand extends Command {
   }
 }
 
-RoutesCommand.description = `Describe the command here
-...
-Extra documentation goes here
-`
-
-RoutesCommand.flags = {
-  name: flags.string({char: 'n', description: 'name to print'}),
-}
+RoutesCommand.description = `Create a React-Router file`
 
 module.exports = RoutesCommand

@@ -5,15 +5,12 @@ const dmuiComponent = require('../template/dumbMaterialUi')
 class DmuiCommand extends Command {
   async run() {
     const {flags} = this.parse(DmuiCommand)
-    const name = flags.name || 'world'
-    this.log(`hello ${name} from /Users/bcree/Desktop/react-template-cli/src/commands/dmui.js`)
+    const name = flags.name || 'myComponent'
+    await fs.writeFile(`${name}.js`, dmuiComponent(name))
   }
 }
 
-DmuiCommand.description = `Describe the command here
-...
-Extra documentation goes here
-`
+DmuiCommand.description = `Create a barebones Material-UI React dumb component`
 
 DmuiCommand.flags = {
   name: flags.string({char: 'n', description: 'name to print'}),

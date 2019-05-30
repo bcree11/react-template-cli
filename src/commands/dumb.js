@@ -10,13 +10,10 @@ class DumbCommand extends Command {
   }
 }
 
-DumbCommand.description = `Describe the command here
-...
-Extra documentation goes here
-`
+DumbCommand.description = `Create a basic React dumb component`
 
 DumbCommand.flags = {
-  name: flags.string({char: 'n', description: 'name to print'}),
+  name: flags.string({char: 'n', description: 'name of file and component'}),
 }
 
 module.exports = DumbCommand

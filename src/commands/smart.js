@@ -10,13 +10,10 @@ class SmartCommand extends Command {
   }
 }
 
-SmartCommand.description = `Describe the command here
-...
-Extra documentation goes here
-`
+SmartCommand.description = `Create a basic React smart component`
 
 SmartCommand.flags = {
-  name: flags.string({char: 'n', description: 'name to print'}),
+  name: flags.string({char: 'n', description: 'name of file and component'}),
 }
 
 module.exports = SmartCommand
