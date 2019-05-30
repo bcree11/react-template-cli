@@ -6,7 +6,7 @@
   "bin": {
     "rqt": "./bin/run"
   },
-  "bugs": "https://github.com/bcree11/react-quick-template-cli/issues",
+  "bugs": "https://github.com/bcree11/react-template-cli/issues",
   "dependencies": {
     "@oclif/command": "1.5.13",
     "@oclif/config": "1.13.0",
@@ -29,7 +29,7 @@
     "/oclif.manifest.json",
     "/src"
   ],
-  "homepage": "https://github.com/bcree11/react-quick-template-cli",
+  "homepage": "https://github.com/bcree11/react-template-cli",
   "keywords": [
     "oclif"
   ],
@@ -42,7 +42,7 @@
       "@oclif/plugin-help"
     ]
   },
-  "repository": "bcree11/react-quick-template-cli",
+  "repository": "bcree11/react-template-cli",
   "scripts": {
     "postpack": "rm -f oclif.manifest.json",
     "prepack": "oclif-dev manifest && oclif-dev readme",

@@ -6,7 +6,7 @@ Quickly create React smart and dumb components, along with a Material-UI templat
 [![oclif](https://img.shields.io/badge/cli-oclif-brightgreen.svg)](https://oclif.io)
 [![Version](https://img.shields.io/npm/v/react-quick-template.svg)](https://npmjs.org/package/react-quick-template)
 [![Downloads/week](https://img.shields.io/npm/dw/react-quick-template.svg)](https://npmjs.org/package/react-quick-template)
-[![License](https://img.shields.io/npm/l/react-quick-template.svg)](https://github.com/bcree11/react-quick-template-cli/blob/master/package.json)
+[![License](https://img.shields.io/npm/l/react-quick-template.svg)](https://github.com/bcree11/react-template-cli/blob/master/package.json)
 
 <!-- toc -->
 * [Usage](#usage)
@@ -85,7 +85,7 @@ export default class MyComponent extends React.Component {
 }
 ```
 
-_See code: [src/commands/smart.js](https://github.com/bcree11/react-quick-template-cli/blob/v0.0.0/src/commands/smart.js)_
+_See code: [src/commands/smart.js](https://github.com/bcree11/react-template-cli/blob/v0.0.0/src/commands/smart.js)_
 
 ## `rqt dumb`
 
@@ -115,7 +115,7 @@ const MyComponent = (props) => {
 }
 ```
 
-_See code: [src/commands/dumb.js](https://github.com/bcree11/react-quick-template-cli/blob/v0.0.0/src/commands/dumb.js)_
+_See code: [src/commands/dumb.js](https://github.com/bcree11/react-template-cli/blob/v0.0.0/src/commands/dumb.js)_
 
 ## `rqt dmui`
 
@@ -158,7 +158,7 @@ MyComponent.propTypes = {
 export default withStyles(styles)(MyComponent)
 ```
 
-_See code: [src/commands/dmui.js](https://github.com/bcree11/react-quick-template-cli/blob/v0.0.0/src/commands/dmui.js)_
+_See code: [src/commands/dmui.js](https://github.com/bcree11/react-template-cli/blob/v0.0.0/src/commands/dmui.js)_
 
 ## `rqt mui`
 
@@ -206,7 +206,7 @@ MyComponent.propTypes = {
 export default withStyles(styles)(MyComponent)
 ```
 
-_See code: [src/commands/mui.js](https://github.com/bcree11/react-quick-template-cli/blob/v0.0.0/src/commands/mui.js)_
+_See code: [src/commands/mui.js](https://github.com/bcree11/react-template-cli/blob/v0.0.0/src/commands/mui.js)_
 
 ## `rqt routes`
 
@@ -238,6 +238,6 @@ export default props => (
 ```
 
 
-_See code: [src/commands/routes.js](https://github.com/bcree11/react-quick-template-cli/blob/v0.0.0/src/commands/routes.js)_
+_See code: [src/commands/routes.js](https://github.com/bcree11/react-template-cli/blob/v0.0.0/src/commands/routes.js)_
 
 <!-- commandsstop -->
