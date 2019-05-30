@@ -29,11 +29,11 @@ USAGE
 # Commands
 <!-- commands -->
 * [`rqt help [COMMAND]`](#rqt-help-command)
-* [`rqt smart`](#rqt-smart)
-* [`rqt dumb`](#rqt-dumb)
+* [`rqt smart -n name`](#rqt-smart)
+* [`rqt dumb -n name`](#rqt-dumb)
 * [`rqt routes`](#rqt-routes)
-* [`rqt dmui`](#rqt-dmui)
-* [`rqt mui`](#rqt-mui)
+* [`rqt dmui -n name`](#rqt-dmui)
+* [`rqt mui -n name`](#rqt-mui)
 
 ## `rqt help [COMMAND]`
 
@@ -85,7 +85,7 @@ export default class MyComponent extends React.Component {
 }
 ```
 
-_See code: [src/commands/dmui.js](https://github.com/bcree11/react-quick-template-cli/blob/v0.0.0/src/commands/smart.js)_
+_See code: [src/commands/smart.js](https://github.com/bcree11/react-quick-template-cli/blob/v0.0.0/src/commands/smart.js)_
 
 ## `rqt dumb`
 
@@ -146,7 +146,7 @@ export default props => (
 )
 ```
 
-_See code: [src/commands/dumb.js](https://github.com/bcree11/react-quick-template-cli/blob/v0.0.0/src/commands/routes.js)_
+_See code: [src/commands/routes.js](https://github.com/bcree11/react-quick-template-cli/blob/v0.0.0/src/commands/routes.js)_
 
 ## `rqt dmui`
 
