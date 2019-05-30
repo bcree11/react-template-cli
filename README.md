@@ -1,7 +1,9 @@
 react-quick-template
 ====================
 
-Quickly create React smart and dumb components, along with a Material-UI template
+Quickly create React smart and dumb components, along with a Material-UI template.
+
+Currently only React files can be created.
 
 [![oclif](https://img.shields.io/badge/cli-oclif-brightgreen.svg)](https://oclif.io)
 [![Version](https://img.shields.io/npm/v/react-quick-template.svg)](https://npmjs.org/package/react-quick-template)
