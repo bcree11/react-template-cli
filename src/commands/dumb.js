@@ -1,4 +1,5 @@
 const {Command, flags} = require('@oclif/command')
+// const name
 
 class DumbCommand extends Command {
   async run() {

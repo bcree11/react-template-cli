@@ -1,6 +1,6 @@
 const {Command, flags} = require('@oclif/command')
 const fs = require('fs').promises
-const nameComponent = require('../generators/smart')
+const nameComponent = require('../template/smart.js')
 
 class SmartCommand extends Command {
   async run() {

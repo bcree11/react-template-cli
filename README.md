@@ -28,11 +28,28 @@ USAGE
 <!-- usagestop -->
 # Commands
 <!-- commands -->
+* [`rqt dmui`](#rqt-dmui)
 * [`rqt dumb`](#rqt-dumb)
-* [`rqt hello`](#rqt-hello)
 * [`rqt help [COMMAND]`](#rqt-help-command)
 * [`rqt mui`](#rqt-mui)
-* [`rqt routes`](#rqt-routes)
+
+## `rqt dmui`
+
+Describe the command here
+
+```
+USAGE
+  $ rqt dmui
+
+OPTIONS
+  -n, --name=name  name to print
+
+DESCRIPTION
+  ...
+  Extra documentation goes here
+```
+
+_See code: [src/commands/dmui.js](https://github.com/bcree11/react-quick-template-cli/blob/v0.0.0/src/commands/dmui.js)_
 
 ## `rqt dumb`
 
@@ -51,24 +68,6 @@ DESCRIPTION
 ```
 
 _See code: [src/commands/dumb.js](https://github.com/bcree11/react-quick-template-cli/blob/v0.0.0/src/commands/dumb.js)_
-
-## `rqt hello`
-
-Describe the command here
-
-```
-USAGE
-  $ rqt hello
-
-OPTIONS
-  -n, --name=name  name to print
-
-DESCRIPTION
-  ...
-  Extra documentation goes here
-```
-
-_See code: [src/commands/hello.js](https://github.com/bcree11/react-quick-template-cli/blob/v0.0.0/src/commands/hello.js)_
 
 ## `rqt help [COMMAND]`
 
@@ -104,22 +103,4 @@ DESCRIPTION
 ```
 
 _See code: [src/commands/mui.js](https://github.com/bcree11/react-quick-template-cli/blob/v0.0.0/src/commands/mui.js)_
-
-## `rqt routes`
-
-Describe the command here
-
-```
-USAGE
-  $ rqt routes
-
-OPTIONS
-  -n, --name=name  name to print
-
-DESCRIPTION
-  ...
-  Extra documentation goes here
-```
-
-_See code: [src/commands/routes.js](https://github.com/bcree11/react-quick-template-cli/blob/v0.0.0/src/commands/routes.js)_
 <!-- commandsstop -->
