@@ -5,7 +5,7 @@ const smartNameComponent = require('../template/smart')
 class SmartCommand extends Command {
   async run() {
     const {flags} = this.parse(SmartCommand)
-    const name = flags.name || 'mySmartComponent'
+    const name = flags.name || 'myComponent'
     await fs.writeFile(`${name}.js`, smartNameComponent(name))
   }
 }

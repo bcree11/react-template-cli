@@ -5,7 +5,7 @@ const muiComponent = require('../template/smartMaterialUi')
 class MuiCommand extends Command {
   async run() {
     const {flags} = this.parse(MuiCommand)
-    const name = flags.name || 'world'
+    const name = flags.name || 'myComponent'
     await fs.writeFile(`${name}.js`, muiComponent(name))
   }
 }

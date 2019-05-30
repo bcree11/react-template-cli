@@ -5,7 +5,7 @@ const dumbComponent = require('../template/dumb')
 class DumbCommand extends Command {
   async run() {
     const {flags} = this.parse(DumbCommand)
-    const name = flags.name || 'world'
+    const name = flags.name || 'myComponent'
     await fs.writeFile(`${name}.js`, dumbComponent(name))
   }
 }
