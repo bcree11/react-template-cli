@@ -1,11 +1,12 @@
 const {Command, flags} = require('@oclif/command')
-// const name
+const fs = require('fs').promises
+const dumbComponent = require('../template/dumb')
 
 class DumbCommand extends Command {
   async run() {
     const {flags} = this.parse(DumbCommand)
     const name = flags.name || 'world'
-    this.log(`hello ${name} from /Users/bcree/Desktop/react-template-cli/src/commands/generate/dumb.js`)
+    await fs.writeFile(`${name}.js`, dumbComponent(name))
   }
 }
 

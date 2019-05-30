@@ -1,4 +1,6 @@
 const {Command, flags} = require('@oclif/command')
+const fs = require('fs').promises
+const dmuiComponent = require('../template/dumbMaterialUi')
 
 class DmuiCommand extends Command {
   async run() {

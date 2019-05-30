@@ -1,10 +1,12 @@
 const {Command, flags} = require('@oclif/command')
+const fs = require('fs').promises
+const muiComponent = require('../template/smartMaterialUi')
 
 class MuiCommand extends Command {
   async run() {
     const {flags} = this.parse(MuiCommand)
     const name = flags.name || 'world'
-    this.log(`hello ${name} from /Users/bcree/Desktop/react-template-cli/src/commands/generate/mui.js`)
+    await fs.writeFile(`${name}.js`, muiComponent(name))
   }
 }
 

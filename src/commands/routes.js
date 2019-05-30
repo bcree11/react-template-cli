@@ -1,6 +1,6 @@
 const {Command, flags} = require('@oclif/command')
 const fs = require('fs').promises
-const routes = require('../template/routes.js')
+const routes = require('../template/routes')
 
 class RoutesCommand extends Command {
   async run() {
