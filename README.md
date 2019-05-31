@@ -77,6 +77,8 @@ OPTIONS
 
 Create a basic React smart component
 
+```
+
 import React from 'react'
 import './App.css'
 
@@ -93,6 +95,7 @@ export default class Smart extends React.Component {
     )
   }
 }
+```
 
 ```
 USAGE
@@ -106,6 +109,8 @@ OPTIONS
 
 Create a basic React dumb component
 
+```
+
 import React from 'react'
 import './App.css'
 
@@ -117,6 +122,7 @@ const Dumb = (props) => {
     </div>
   )
 }
+```
 
 ```
 USAGE
@@ -129,6 +135,8 @@ OPTIONS
 ## `rqt mui`
 
 Create a barebones Material-UI React component
+
+```
 
 import React from 'react'
 import PropTypes from 'prop-types'
@@ -159,6 +167,7 @@ classes: PropTypes.object.isRequired,
 }
 
 export default withStyles(styles)(Smart)
+```
 
 ```
 USAGE
@@ -171,6 +180,8 @@ OPTIONS
 ## `rqt dmui`
 
 Create a barebones Material-UI React dumb component
+
+```
 
 import React from 'react'
 import PropTypes from 'prop-types'
@@ -196,6 +207,7 @@ Dumb.propTypes = {
 }
 
 export default withStyles(styles)(Dumb)
+```
 
 ```
 USAGE
@@ -208,6 +220,8 @@ OPTIONS
 ## `rqt routes`
 
 Create a React-Router file
+
+```
 
 import React from 'react'
 import {
@@ -224,6 +238,7 @@ export default props => (
     </Switch>
   </BrowserRouter>
 )
+```
 
 ```
 USAGE
