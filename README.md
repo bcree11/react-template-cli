@@ -50,11 +50,11 @@ Example
 
 Generates:
 
-  src
+`  src
   ├── pages
   │   └── contact
   │       └── card.js
-
+`
 
 ## `rqt help [COMMAND]`
 
