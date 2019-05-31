@@ -22,7 +22,7 @@ $ npm install -g react-quick-template
 $ rqt COMMAND
 running command...
 $ rqt (-v|--version|version)
-react-quick-template/0.0.3 darwin-x64 node-v11.6.0
+react-quick-template/0.0.0 darwin-x64 node-v11.6.0
 $ rqt --help [COMMAND]
 USAGE
   $ rqt COMMAND
@@ -31,40 +31,32 @@ USAGE
 <!-- usagestop -->
 # Commands
 <!-- commands -->
-* [`rqt dmui`](#rqt-dmui)
-* [`rqt dumb`](#rqt-dumb)
 * [`rqt help [COMMAND]`](#rqt-help-command)
-* [`rqt mui`](#rqt-mui)
-* [`rqt routes`](#rqt-routes)
 * [`rqt smart`](#rqt-smart)
+* [`rqt dumb`](#rqt-dumb)
+* [`rqt mui`](#rqt-mui)
+* [`rqt dmui`](#rqt-dmui)
+* [`rqt routes`](#rqt-routes)
 
-## `rqt dmui`
 
-Create a barebones Material-UI React dumb component
-
-```
-USAGE
-  $ rqt dmui
-
-OPTIONS
-  -n, --name=name  name to print
-```
-
-_See code: [src/commands/dmui.js](https://github.com/bcree11/react-template-cli/blob/v0.0.3/src/commands/dmui.js)_
-
-## `rqt dumb`
-
-Create a basic React dumb component
+# Directory Tree
 
 ```
-USAGE
-  $ rqt dumb
+Example
 
-OPTIONS
-  -n, --name=name  name of file and component
+  $ rqt smart -n src/pages/contact/card
+
 ```
 
-_See code: [src/commands/dumb.js](https://github.com/bcree11/react-template-cli/blob/v0.0.3/src/commands/dumb.js)_
+Generates:
+
+```
+  src
+  ├── pages
+  │   └── contact
+  │       └── card.js
+
+```
 
 ## `rqt help [COMMAND]`
 
@@ -81,44 +73,176 @@ OPTIONS
   --all  see all commands in CLI
 ```
 
-_See code: [@oclif/plugin-help](https://github.com/oclif/plugin-help/blob/v2.1.6/src/commands/help.ts)_
-
-## `rqt mui`
-
-Create a barebones Material-UI React component
-
-```
-USAGE
-  $ rqt mui
-
-OPTIONS
-  -n, --name=name  name of file and component
-```
-
-_See code: [src/commands/mui.js](https://github.com/bcree11/react-template-cli/blob/v0.0.3/src/commands/mui.js)_
-
-## `rqt routes`
-
-Create a React-Router file
-
-```
-USAGE
-  $ rqt routes
-```
-
-_See code: [src/commands/routes.js](https://github.com/bcree11/react-template-cli/blob/v0.0.3/src/commands/routes.js)_
-
 ## `rqt smart`
 
 Create a basic React smart component
+
+```
+
+import React from 'react'
+import './App.css'
+
+export default class Smart extends React.Component {
+  state = {
+  }
+
+  render() {
+    const {} = this.state
+    return (
+      <div>
+        <h1>Smart Component</h1>
+      </div>
+    )
+  }
+}
+```
 
 ```
 USAGE
   $ rqt smart
 
 OPTIONS
-  -n, --name=name  name of file and component
+  -n, --name=name  name of file and path
 ```
 
-_See code: [src/commands/smart.js](https://github.com/bcree11/react-template-cli/blob/v0.0.3/src/commands/smart.js)_
+## `rqt dumb`
+
+Create a basic React dumb component
+
+```
+
+import React from 'react'
+import './App.css'
+
+const Dumb = (props) => {
+  const {} = props
+  return (
+    <div>
+      <h1>Dumb Component</h1>
+    </div>
+  )
+}
+```
+
+```
+USAGE
+  $ rqt dumb
+
+OPTIONS
+  -n, --name=name  name of file and path
+```
+
+## `rqt mui`
+
+Create a barebones Material-UI React component
+
+```
+
+import React from 'react'
+import PropTypes from 'prop-types'
+import { withStyles } from '@material-ui/core/styles'
+
+const styles = theme => ({
+  root: {
+    color: 'blue'
+  },
+})
+
+class Smart extends React.Component {
+  state = {
+  }
+
+  render() {
+    const {} = this.state
+    return (
+      <div className={classes.root}>
+        <h1>Smart M-UI Component</h1>
+      </div>
+    )
+  }
+}
+
+Smart.propTypes = {
+classes: PropTypes.object.isRequired,
+}
+
+export default withStyles(styles)(Smart)
+```
+
+```
+USAGE
+  $ rqt mui
+
+OPTIONS
+  -n, --name=name  name of file and path
+```
+
+## `rqt dmui`
+
+Create a barebones Material-UI React dumb component
+
+```
+
+import React from 'react'
+import PropTypes from 'prop-types'
+import { withStyles } from '@material-ui/core/styles'
+
+const styles = theme => ({
+  root: {
+    color: 'blue'
+  },
+})
+
+const Dumb = (props) => {
+  const { classes } = props
+  return (
+    <div className={classes.root}>
+      <h1>Dumb M-UI Component</h1>
+    </div>
+  )
+}
+
+Dumb.propTypes = {
+  classes: PropTypes.object.isRequired,
+}
+
+export default withStyles(styles)(Dumb)
+```
+
+```
+USAGE
+  $ rqt dmui
+
+OPTIONS
+  -n, --name=name  name of file and path
+```
+
+## `rqt routes`
+
+Create a React-Router file
+
+```
+
+import React from 'react'
+import {
+  BrowserRouter,
+  Route,
+  Switch
+} from 'react-router-dom'
+
+export default props => (
+  <BrowserRouter>
+    <Switch>
+      <Route exact path='/some-route' component={SomeComponent}/>
+      <Route path='/' component={Home}/>
+    </Switch>
+  </BrowserRouter>
+)
+```
+
+```
+USAGE
+  $ rqt routes
+```
+
 <!-- commandsstop -->
