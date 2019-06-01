@@ -1,7 +1,7 @@
 {
   "name": "react-quick-template",
   "description": "Quickly generat React and Material-Ui component templates.",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "author": "Brandon Cree",
   "bin": {
     "rqt": "./bin/run"
