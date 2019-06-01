@@ -33,7 +33,7 @@
   ],
   "homepage": "https://github.com/bcree11/react-template-cli",
   "keywords": [
-    "oclif"
+    "oclif", "React", "template", "component"
   ],
   "license": "MIT",
   "main": "src/index.js",
