@@ -19,6 +19,9 @@ to generate directories and sub-directories.
 <!-- usage -->
 ```sh-session
 $ npm install -g react-quick-template
+Or for one project
+$ npm install i react-quick-template --save-dev
+
 $ rqt COMMAND
 running command...
 $ rqt (-v|--version|version)
