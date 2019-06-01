@@ -287,7 +287,8 @@ USAGE
 # Issues
 
 ```
-If you want a template or feature added or find any bugs create an issue and I will take care of it.
+If you want a template or feature added or find any bugs create an
+issue and I will take care of it.
 
 ```
 <!-- commandsstop -->
