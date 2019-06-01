@@ -1,7 +1,7 @@
 {
   "name": "react-quick-template",
   "description": "Quickly generat React and Material-Ui component templates.",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "author": "Brandon Cree",
   "bin": {
     "rqt": "./bin/run"
@@ -33,7 +33,10 @@
   ],
   "homepage": "https://github.com/bcree11/react-template-cli",
   "keywords": [
-    "oclif", "React", "template", "component"
+    "oclif",
+    "React",
+    "template",
+    "component"
   ],
   "license": "MIT",
   "main": "src/index.js",
