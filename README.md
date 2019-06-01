@@ -32,6 +32,7 @@ USAGE
 # Commands
 <!-- commands -->
 * [`rqt help [COMMAND]`](#rqt-help-command)
+* [`rqt hook`](#rqt-hook)
 * [`rqt smart`](#rqt-smart)
 * [`rqt dumb`](#rqt-dumb)
 * [`rqt mui`](#rqt-mui)
@@ -72,6 +73,34 @@ ARGUMENTS
 OPTIONS
   --all  see all commands in CLI
 ```
+## `rqt hook`
+
+Create a basic React smart component
+
+```
+
+rqt hook -n example
+
+import React, { useState } from 'react'
+
+function Example() {
+  const [] = useState()
+
+  return (
+    <div>
+      <h1>Example Component</h1>
+    </div>
+  )
+}
+```
+
+```
+USAGE
+  $ rqt smart
+
+OPTIONS
+  -n, --name=name  name of file and path
+```
 
 ## `rqt smart`
 
@@ -79,10 +108,12 @@ Create a basic React smart component
 
 ```
 
+rqt smart -n example
+
 import React from 'react'
 import './App.css'
 
-export default class Smart extends React.Component {
+export default class Example extends React.Component {
   state = {
   }
 
@@ -90,7 +121,7 @@ export default class Smart extends React.Component {
     const {} = this.state
     return (
       <div>
-        <h1>Smart Component</h1>
+        <h1>Example Component</h1>
       </div>
     )
   }
@@ -111,14 +142,16 @@ Create a basic React dumb component
 
 ```
 
+rqt dumb -n example
+
 import React from 'react'
 import './App.css'
 
-const Dumb = (props) => {
+const Example = (props) => {
   const {} = props
   return (
     <div>
-      <h1>Dumb Component</h1>
+      <h1>Example Component</h1>
     </div>
   )
 }
@@ -138,6 +171,8 @@ Create a barebones Material-UI React component
 
 ```
 
+rqt mui -n example
+
 import React from 'react'
 import PropTypes from 'prop-types'
 import { withStyles } from '@material-ui/core/styles'
@@ -148,7 +183,7 @@ const styles = theme => ({
   },
 })
 
-class Smart extends React.Component {
+class Example extends React.Component {
   state = {
   }
 
@@ -156,17 +191,17 @@ class Smart extends React.Component {
     const {} = this.state
     return (
       <div className={classes.root}>
-        <h1>Smart M-UI Component</h1>
+        <h1>Example M-UI Component</h1>
       </div>
     )
   }
 }
 
-Smart.propTypes = {
+Example.propTypes = {
 classes: PropTypes.object.isRequired,
 }
 
-export default withStyles(styles)(Smart)
+export default withStyles(styles)(Example)
 ```
 
 ```
@@ -183,6 +218,8 @@ Create a barebones Material-UI React dumb component
 
 ```
 
+rqt dumb -n example
+
 import React from 'react'
 import PropTypes from 'prop-types'
 import { withStyles } from '@material-ui/core/styles'
@@ -193,20 +230,20 @@ const styles = theme => ({
   },
 })
 
-const Dumb = (props) => {
+const Example = (props) => {
   const { classes } = props
   return (
     <div className={classes.root}>
-      <h1>Dumb M-UI Component</h1>
+      <h1>Example M-UI Component</h1>
     </div>
   )
 }
 
-Dumb.propTypes = {
+Example.propTypes = {
   classes: PropTypes.object.isRequired,
 }
 
-export default withStyles(styles)(Dumb)
+export default withStyles(styles)(Example)
 ```
 
 ```
@@ -222,6 +259,8 @@ OPTIONS
 Create a React-Router file
 
 ```
+
+rqt routes
 
 import React from 'react'
 import {
@@ -245,4 +284,10 @@ USAGE
   $ rqt routes
 ```
 
+# Issues
+
+```
+If you want a template or feature added or find any bugs create an issue and I will take care of it.
+
+```
 <!-- commandsstop -->

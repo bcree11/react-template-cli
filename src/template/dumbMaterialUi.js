@@ -1,4 +1,4 @@
-module.exports = function nameComponent(name){
+module.exports = function (name){
   const upperCaseName = name.charAt(0).toUpperCase() + name.slice(1)
   const dumbMaterial = `import React from 'react'
 import PropTypes from 'prop-types'

@@ -1,14 +1,14 @@
 const {Command, flags} = require('@oclif/command')
 const fs = require('fs').promises
-const dumbComponent = require('../template/dumb')
+const hookComponent = require('../template/hook')
 const mkdirp = require('mkdirp')
 const path = require('path')
 const appDir = process.cwd()
 const chalk = require('chalk')
 
-class DumbCommand extends Command {
+class HookCommand extends Command {
   async run() {
-    const {flags} = this.parse(DumbCommand)
+    const {flags} = this.parse(HookCommand)
     const name = flags.name || 'myComponent'
     const fileArr = name.split('/')
     const file = fileArr.pop()
@@ -22,20 +22,20 @@ class DumbCommand extends Command {
     makeDir()
     setTimeout(function (){
       if(file){
-        fs.writeFile(`${fullPath+file}.js`, dumbComponent(file))
+        fs.writeFile(`${fullPath+file}.js`, hookComponent(file))
         console.log(chalk.green(`Generated ${fullPath+file}.js`))
       } else {
-        fs.writeFile(`${fullPath}myComponent.js`, dumbComponent('myComponent'))
+        fs.writeFile(`${fullPath}myComponent.js`, hookComponent('myComponent'))
         console.log(chalk.green(`Generated ${fullPath}myComponent.js`))
       }
     }, 1000)
   }
 }
 
-DumbCommand.description = `Create a basic React dumb component`
+HookCommand.description = `Create a basic React hook component`
 
-DumbCommand.flags = {
-  name: flags.string({char: 'n', description: 'name of file and component'}),
+HookCommand.flags = {
+  name: flags.string({char: 'n', description: 'name to print'}),
 }
 
-module.exports = DumbCommand
+module.exports = HookCommand
