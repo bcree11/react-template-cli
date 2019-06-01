@@ -4,6 +4,7 @@ const dmuiComponent = require('../template/dumbMaterialUi')
 const mkdirp = require('mkdirp')
 const path = require('path')
 const appDir = process.cwd()
+const chalk = require('chalk')
 
 class DmuiCommand extends Command {
   async run() {
@@ -22,8 +23,10 @@ class DmuiCommand extends Command {
     setTimeout(function (){
       if(file){
         fs.writeFile(`${fullPath+file}.js`, dmuiComponent(file))
+        console.log(chalk.green(`Generated ${fullPath+file}.js`))
       } else {
         fs.writeFile(`${fullPath}myComponent.js`, dmuiComponent('myComponent'))
+        console.log(chalk.green(`Generated ${fullPath}myComponent.js`))
       }
     }, 1000)
   }

@@ -4,6 +4,7 @@ const muiComponent = require('../template/smartMaterialUi')
 const mkdirp = require('mkdirp')
 const path = require('path')
 const appDir = process.cwd()
+const chalk = require('chalk')
 
 class MuiCommand extends Command {
   async run() {
@@ -22,8 +23,10 @@ class MuiCommand extends Command {
     setTimeout(function (){
       if(file){
         fs.writeFile(`${fullPath+file}.js`, muiComponent(file))
+        console.log(chalk.green(`Generated ${fullPath+file}.js`))
       } else {
         fs.writeFile(`${fullPath}myComponent.js`, muiComponent('myComponent'))
+        console.log(chalk.green(`Generated ${fullPath}myComponent.js`))
       }
     }, 1000)
   }

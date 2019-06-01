@@ -4,6 +4,7 @@ const smartComponent = require('../template/smart')
 const mkdirp = require('mkdirp')
 const path = require('path')
 const appDir = process.cwd()
+const chalk = require('chalk')
 
 class SmartCommand extends Command {
   async run() {
@@ -22,8 +23,10 @@ class SmartCommand extends Command {
     setTimeout(function (){
       if(file){
         fs.writeFile(`${fullPath+file}.js`, smartComponent(file))
+        console.log(chalk.green(`Generated ${fullPath+file}.js`))
       } else {
         fs.writeFile(`${fullPath}myComponent.js`, smartComponent('myComponent'))
+        console.log(chalk.green(`Generated ${fullPath}myComponent.js`))
       }
     }, 1000)
   }
