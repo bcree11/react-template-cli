@@ -1,7 +1,6 @@
 module.exports = function (name){
   const upperCaseName = name.charAt(0).toUpperCase() + name.slice(1)
   const smart = `import React from 'react'
-import './App.css'
 
 export default class ${upperCaseName} extends React.Component {
   state = {

@@ -10,6 +10,8 @@ function ${upperCaseName}() {
       <h1>${upperCaseName} Component</h1>
     </div>
   )
-}`
+}
+
+export default ${upperCaseName}`
   return hook
 }
