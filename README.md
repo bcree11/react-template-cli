@@ -1,7 +1,7 @@
 react-quick-template
 ====================
 
-Quickly generat React and Material-Ui component templates. You also have the option
+Quickly generate React and Material-Ui component templates. You also have the option
 to generate directories and sub-directories.
 
 
@@ -22,6 +22,7 @@ $ npm install -g react-quick-template
 
 For one project
 $ npm install i react-quick-template --save-dev
+
 Or if you used Yarn
 $ yarn add react-quick-template
 
@@ -48,14 +49,14 @@ USAGE
 
 # Directory Tree
 
-```
-Example
+**Example:**
 
+```
   $ rqt smart -n src/pages/contact/card
 
 ```
 
-Generates:
+**Generates:**
 
 ```
   src
@@ -67,7 +68,7 @@ Generates:
 
 ## `rqt help [COMMAND]`
 
-display help for rqt
+Display help for react-quick-template
 
 ```
 USAGE
@@ -79,13 +80,20 @@ ARGUMENTS
 OPTIONS
   --all  see all commands in CLI
 ```
+
 ## `rqt hook`
 
-Create a basic React smart component
+Create a basic React hook component
 
-```
+**Example:**
 
 rqt hook -n example
+
+**Generates:**
+
+file: /example.js with the following template:
+
+```
 
 import React, { useState } from 'react'
 
@@ -112,9 +120,15 @@ OPTIONS
 
 Create a basic React smart component
 
-```
+**Example:**
 
 rqt smart -n example
+
+**Generates:**
+
+file: /example.js with the following template:
+
+```
 
 import React from 'react'
 import './App.css'
@@ -146,9 +160,15 @@ OPTIONS
 
 Create a basic React dumb component
 
-```
+**Example:**
 
 rqt dumb -n example
+
+**Generates:**
+
+file: /example.js with the following template:
+
+```
 
 import React from 'react'
 import './App.css'
@@ -175,9 +195,15 @@ OPTIONS
 
 Create a barebones Material-UI React component
 
-```
+**Example:**
 
 rqt mui -n example
+
+**Generates:**
+
+file: /example.js with the following template:
+
+```
 
 import React from 'react'
 import PropTypes from 'prop-types'
@@ -222,9 +248,15 @@ OPTIONS
 
 Create a barebones Material-UI React dumb component
 
-```
+**Example:**
 
-rqt dumb -n example
+rqt dmui -n example
+
+**Generates:**
+
+file: /example.js with the following template:
+
+```
 
 import React from 'react'
 import PropTypes from 'prop-types'
@@ -264,9 +296,15 @@ OPTIONS
 
 Create a React-Router file
 
-```
+**Example:**
 
 rqt routes
+
+**Generates:**
+
+file: /routes.js with the following template:
+
+```
 
 import React from 'react'
 import {
