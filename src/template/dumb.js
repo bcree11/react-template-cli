@@ -1,7 +1,6 @@
 module.exports = function (name){
   const upperCaseName = name.charAt(0).toUpperCase() + name.slice(1)
   const dumb = `import React from 'react'
-import './App.css'
 
 const ${upperCaseName} = (props) => {
   const {} = props
@@ -10,6 +9,8 @@ const ${upperCaseName} = (props) => {
       <h1>${upperCaseName} Component</h1>
     </div>
   )
-}`
+}
+
+export default ${upperCaseName}`
   return dumb
 }
